@@ -7,4 +7,3 @@ public class DataRecord {
     private String name;
     private String email;
 }
-
