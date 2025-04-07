@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/data")
+
 public class DataController {
     private final DataService dataService;
 
@@ -16,8 +17,9 @@ public class DataController {
         this.dataService = dataService;
     }
 
-    @GetMapping
+    @RequestMapping(value = "/getRecords", method = RequestMethod.GET)
     public List<DataRecord> getAllData() throws IOException {
+        System.out.println("Records: ");
         return dataService.getAllRecords();
     }
 
@@ -30,5 +32,10 @@ public class DataController {
     public String addData(@RequestBody DataRecord newRecord) {
         return "This API does not support saving data. Just a sample endpoint!";
     }
+
+
+    
+
+
 }
 

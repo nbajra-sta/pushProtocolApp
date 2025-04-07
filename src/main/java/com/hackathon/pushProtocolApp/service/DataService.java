@@ -16,6 +16,7 @@ public class DataService {
     }
 
     public List<DataRecord> getAllRecords() throws IOException {
+        System.out.println("read data-service data");
         return fileReaderUtil.readData();
     }
 
