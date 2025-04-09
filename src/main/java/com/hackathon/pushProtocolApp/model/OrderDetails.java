@@ -12,4 +12,16 @@ public class OrderDetails {
         this.price = price;
         this.status = status;
     }
+    public String getProduct(){
+        return product;
+    }
+    public String getPrice(){
+        return price;
+    }
+    public String getStatus(){
+        return status;
+    }
+    public void setProduct(String product){
+        this.product = product;
+    }
 }

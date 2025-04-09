@@ -7,7 +7,20 @@ public class Promotion {
     private String expires;
     
     public Promotion(String promotion, String expires) {
-        this.expires = expires;
+        this.promotion = promotion;
         this.expires = expires;
     }
+    public String getExpires(){
+        return expires;
+    }
+    public String getPromotion(){
+        return promotion;
+    }
+    public void setPromotion(String promotion){
+        this.promotion = promotion;
+    }
+    public void setExpires(String expires){
+        this.expires = expires;
+    }
+
 }
