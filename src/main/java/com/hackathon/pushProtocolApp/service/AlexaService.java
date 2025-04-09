@@ -48,7 +48,7 @@ public class AlexaService {
 
     public List<Promotion> getPromotions() {
         return List.of(
-            new Promotion("10-peice gardening set with your regular priced order of $150 or more", "27th April 2025"),
+            new Promotion("10 piece gardening set with your regular-priced order of $150 or more", "30th April 2025"),
             new Promotion("25% off regular priced scotch packing tape", "30th April 2025")
         );
     }
@@ -77,7 +77,7 @@ public void notifyAlexa(String message) {
     HttpEntity<String> entity = new HttpEntity<>(payload, headers);
 
     ResponseEntity<String> response = restTemplate.exchange(endpoint, HttpMethod.POST, entity, String.class);
-    System.out.println("Alexa Response: " + response.getStatusCodeValue());
+    System.out.println("Alexa Response: " + response.getStatusCode().value());
     System.out.println("Body: " + response.getBody());
 
     try {
